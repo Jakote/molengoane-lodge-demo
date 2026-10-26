@@ -3,18 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Molengoane Lodge — Mountain Lodge, Conferences & Retreats | Nazareth, Lesotho</title>
-<meta name="robots" content="noindex,nofollow"><!-- demo preview — remove on client go-live -->
-<meta name="description" content="Family-run mountain lodge on the A3 Mountain Road, 42 km from Maseru. 29 en-suite rooms, restaurant, conference halls for up to 200, camping. Book directly via WhatsApp — breakfast included.">
+<title>Demo by MEND GROUP: lodge booking site concept (not the official Molengoane Lodge website)</title>
+<meta name="robots" content="noindex,nofollow"><!-- demo only: not commissioned, not the lodge's site -->
+<meta name="description" content="Demo built by MEND GROUP to show what a booking site could look like. Not the lodge's official website; bookings are disabled.">
 <meta name="keywords" content="Molengoane Lodge,Nazareth Lesotho accommodation,Maseru lodge,Lesotho conference venue,Mountain Road lodge,Ha Baroana,Mohale Dam accommodation">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Molengoane Lodge — Mountain Lodge & Conference Venue, Lesotho">
-<meta property="og:description" content="Family-run since 1998. 29 rooms, restaurant, conference halls, camping. Book directly — no booking fees.">
-<meta property="og:image" content="https://www.molengoanelodge.com/wp-content/uploads/2025/05/20250426155907__MG_8718-1024x683.jpg">
+<meta property="og:title" content="Demo by MEND GROUP: lodge booking site concept">
+<meta property="og:description" content="Not the lodge's official website; bookings are disabled.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%23375441'/><text x='50' y='72' font-size='58' font-weight='bold' text-anchor='middle' fill='%23e8c877' font-family='serif'>M</text></svg>">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Molengoane Lodge","description":"Family-run mountain lodge in Ha Molengoane, Nazareth, Lesotho. 29 rooms, restaurant, conference facilities, camping.","foundingDate":"1998","address":{"@type":"PostalAddress","addressLocality":"Ha Molengoane, Nazareth","addressRegion":"Maseru District","addressCountry":"LS"},"telephone":"+26622347766","email":"molengoanel@gmail.com","priceRange":"M700 - M1700","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Restaurant"},{"@type":"LocationFeatureSpecification","name":"Free Wi-Fi"},{"@type":"LocationFeatureSpecification","name":"Conference facilities"},{"@type":"LocationFeatureSpecification","name":"Free parking"},{"@type":"LocationFeatureSpecification","name":"Camping"}]}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -47,7 +43,7 @@ nav li a:hover{background:rgba(255,255,255,.1);color:#fff}
 /* HERO */
 .hero{position:relative;min-height:92vh;display:grid;place-items:center;text-align:center;color:#fff;
   background:linear-gradient(rgba(24,36,27,.45),rgba(24,36,27,.62)),url('https://www.molengoanelodge.com/wp-content/uploads/2025/05/20250426155907__MG_8718-1024x683.jpg') center/cover}
-.hero-in{position:relative;z-index:2;max-width:760px;padding:120px 20px 90px}
+.hero-in{position:relative;z-index:2;max-width:760px;padding:160px 20px 90px}
 .hero-kick{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-l);border:1px solid rgba(232,200,119,.45);border-radius:99px;padding:8px 18px;margin-bottom:26px}
 .hero h1{font-size:clamp(38px,6.5vw,68px);font-weight:600;line-height:1.08;margin-bottom:18px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .hero p{font-size:clamp(15px,1.6vw,18px);color:#ece7d8;max-width:560px;margin:0 auto 34px;line-height:1.75}
@@ -160,6 +156,12 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
 .f-bar{border-top:1px solid rgba(255,255,255,.12);padding:16px 0;font-size:12px;text-align:center;color:#8fa393}
 .f-bar a{color:var(--gold-l);text-decoration:none;font-weight:600}
 
+/* Demo disclosure */
+.demo-bar{background:#fff3c4;color:#3d2e00;font-size:13px;line-height:1.4;text-align:center;padding:8px 16px;border-bottom:1px solid #e0c96a}
+.demo-bar b{font-weight:700}
+.bk-demo{display:none;margin-top:12px;padding:12px 14px;border-radius:10px;background:#fff3c4;color:#3d2e00;font-size:13.5px;line-height:1.5}
+.bk-demo.show{display:block}
+
 /* WhatsApp float */
 .wa-f{position:fixed;bottom:22px;right:22px;width:54px;height:54px;background:#25d366;border-radius:50%;display:grid;place-items:center;z-index:99;box-shadow:0 6px 20px rgba(37,211,102,.4);font-size:26px;text-decoration:none;transition:.25s}
 .wa-f:hover{transform:scale(1.1)}
@@ -172,7 +174,7 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
   .f-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:620px){
-  nav ul{display:none;position:fixed;top:62px;left:0;right:0;background:var(--green-d);flex-direction:column;padding:14px;align-items:stretch;text-align:center}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--green-d);flex-direction:column;padding:14px;align-items:stretch;text-align:center}
   nav ul.open{display:flex}
   .ham{display:block}
   .rooms,.exp,.near,.brow,.f-grid{grid-template-columns:1fr}
@@ -184,6 +186,7 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
 <body>
 
 <nav>
+  <div class="demo-bar" role="note"><b>Demo built by MEND GROUP</b> to show what a booking site could look like. Not the lodge's official website; bookings are disabled.</div>
   <div class="nb">
     <a href="#" class="logo"><div class="logo-m">M</div><div class="logo-t">Molengoane Lodge<small>Est. 1998 · Nazareth, Lesotho</small></div></a>
     <ul id="nm">
@@ -338,9 +341,7 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
         <div class="bp"><i>3</i> We reply with confirmation and payment details. That's it.</div>
       </div>
       <div class="bk-contacts">
-        <a href="tel:+26622347766">📞 +266 2234 7766</a>
-        <a href="tel:+26659466090">📱 +266 5946 6090 (WhatsApp)</a>
-        <a href="mailto:molengoanel@gmail.com">✉ molengoanel@gmail.com</a>
+        <span>Contact details are hidden in this demo.</span>
       </div>
     </div>
     <form class="bform" onsubmit="return waBook(event)">
@@ -368,8 +369,8 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
           <select id="bk-guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
         </div>
       </div>
-      <button type="submit" class="btn btn-wa">💬 Send Booking Request on WhatsApp</button>
-      <small>Prefer email? <a href="mailto:molengoanel@gmail.com" style="color:var(--gold);font-weight:600">molengoanel@gmail.com</a></small>
+      <button type="submit" class="btn btn-wa">💬 Send Booking Request (demo, disabled)</button>
+      <p class="bk-demo" id="bk-demo" role="status"></p>
     </form>
   </div>
 </section>
@@ -385,8 +386,6 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
   </div>
 </section>
 
-<a class="wa-f" href="https://wa.me/26659466090?text=Lumela!%20I'd%20like%20to%20enquire%20about%20a%20booking%20at%20Molengoane%20Lodge." target="_blank" rel="noopener" aria-label="WhatsApp us">💬</a>
-
 <footer>
   <div class="w">
     <div class="f-grid">
@@ -396,9 +395,7 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
       </div>
       <div>
         <h4>Contact</h4>
-        <a href="tel:+26622347766">+266 2234 7766</a>
-        <a href="tel:+26659466090">+266 5946 6090 (WhatsApp)</a>
-        <a href="mailto:molengoanel@gmail.com">molengoanel@gmail.com</a>
+        <p>Contact details are hidden in this demo. This is not the lodge's official website.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -407,7 +404,7 @@ footer{background:var(--green-d);color:#c9c4b2;padding:44px 0 0}
         <a href="#book">Book Direct</a>
       </div>
     </div>
-    <div class="f-bar">© 2026 Molengoane Lodge · Ha Molengoane, Nazareth, Lesotho &nbsp;·&nbsp; Website by <a href="https://mendgroup.co.za" target="_blank" rel="noopener">MEND GROUP</a></div>
+    <div class="f-bar">Demo by MEND GROUP, not commissioned by or affiliated with Molengoane Lodge &nbsp;·&nbsp; <a href="https://mendgroup.co.za" target="_blank" rel="noopener">mendgroup.co.za</a></div>
   </div>
 </footer>
 
@@ -421,8 +418,9 @@ function waBook(e){
   const name=document.getElementById('bk-name').value.trim();
   const inD=document.getElementById('bk-in').value, outD=document.getElementById('bk-out').value;
   const room=document.getElementById('bk-room').value, guests=document.getElementById('bk-guests').value;
-  const msg=`Lumela! I'd like to book at Molengoane Lodge.%0A%0A👤 Name: ${encodeURIComponent(name)}%0A📅 Check-in: ${inD}%0A📅 Check-out: ${outD}%0A🛏 Room: ${encodeURIComponent(room)}%0A👥 Guests: ${guests}%0A%0APlease confirm availability. Kea leboha!`;
-  window.open(`https://wa.me/26659466090?text=${msg}`,'_blank');
+  const box=document.getElementById('bk-demo');
+  box.textContent=`Demo only: bookings are disabled and nothing was sent. On a live site this would open WhatsApp with a request for ${room}, ${guests} guest(s), ${inD} to ${outD}.`;
+  box.classList.add('show');
   return false;
 }
 </script>
